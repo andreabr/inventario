@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('site.home');
-});
+Route::get('/', ['as' => 'site.home', 'uses' => 'SiteController@index']);
+
 
 
 Route::get('/home', 'HomeController@index');
 
+// Route::get('/', ['uses' => 'EquipamentosController@listar']);
+
+Route::get('/equipamento/adicionar', ['as' => 'equipamento.adicionar', 'uses' => 'EquipamentosController@adicionar']);
+Route::post('/equipamento/salvar', ['as' => 'equipamento.salvar', 'uses' => 'EquipamentosController@salvar']);
+Route::get('/equipamento/editar/{id}', ['as' => 'equipamento.editar', 'uses' => 'EquipamentosController@editar']);
+Route::get('/equipamento/deletar/{id}', ['as' => 'equipamento.deletar', 'uses' => 'EquipamentosController@deletar']);
+Route::put('/equipamento/atualizar/{id}', ['as' => 'equipamento.atualizar', 'uses' => 'EquipamentosController@atualizar']);
+
+Route::get('/busca', ['as' => 'site.busca', 'uses' => 'HomeController@busca']);

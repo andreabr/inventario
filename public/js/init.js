@@ -8,6 +8,11 @@ $(".dropdown-button").dropdown({
 $('select').material_select();
 	
 
+setTimeout(function() {
+    $('#msg').fadeOut('fast');
+}, 3000);
+
+
 });
 
 

@@ -13,11 +13,11 @@
 	</div>
 	<div class="input-field col s5">
 		<select name="" id="">
-			<option value="tipo-equipamento">Tipo de Equipamento</option>
-			<option value="local">Local</option>
-			<option value="nome-de-rede">Nome de Rede</option>
+			<option value="tipo-equipamento">Todos</option>
+			<option value="STEL">STEL</option>
+			<option value="DA">DA</option>
 		</select>
-		<label for="">Outros</label>
+		<label for="">Local</label>
 	</div>
 	<div class="input-field col m2">
 		<button class="btn deep-range darken-1 right">

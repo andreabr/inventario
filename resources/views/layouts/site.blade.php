@@ -14,9 +14,13 @@
 </head>
 <body id="app-layout">
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li><a href="#!">three</a></li>
+    <li><a href="#!">Desktop</a></li>
+    <li><a href="#!">Notebook</a></li>
+    <li><a href="#!">Monitor</a></li>
+    <li><a href="#!">Impressora</a></li>
+    <li><a href="#!">Servidor de Rede</a></li>
+    <li><a href="#!">Nobreak</a></li>
+    <li><a href="#!">Switch</a></li>
   </ul>
 
   <header>
