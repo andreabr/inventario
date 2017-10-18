@@ -22,6 +22,7 @@ class CreateEquipamentosTable extends Migration
             $table->string('usuario')->nullable();
             $table->string('nome_de_rede')->nullable();
             $table->string('lacre_numero')->nullable();
+            $table->string('licenciado', 3);
             $table->timestamps();
         });
     }

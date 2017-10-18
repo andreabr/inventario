@@ -1,14 +1,15 @@
 <div class="input-field col s4">
-		<select name="tipo" id="">
-			<option value="Desktop">Desktop</option>
-			<option value="Notebook">Notebook</option>
-			<option value="Monitor">Monitor</option>
-			<option value="Impressora">Impressora</option>
-			<option value="Servidor de Rede">Servidor de Rede</option>
-			<option value="Nobreak">Nobreak</option>
-			<option value="Switch">Switch</option>
-		</select>
-		<label for="">Tipo</label>
+	<select name="tipo" id="">
+		<option value="Desktop">Desktop</option>
+		<option value="Notebook">Notebook</option>
+		<option value="Servidor de Rede">Servidor de Rede</option>
+		<option value="Monitor">Monitor</option>
+		<option value="Impressora">Impressora</option>
+		<option value="Estabilizador">Estabilizador</option>
+		<option value="Nobreak">Nobreak</option>
+		<option value="Switch">Switch</option>
+	</select>
+	<label for="">Tipo</label>
 </div>
 
 <div class="input-field col s4">
@@ -23,11 +24,35 @@
 
 <div class="input-field col s4">
 	<input type="text" name="serial" class="validate">
-	<label for="">Serial</label>
+	<label for="">Serial/Tag</label>
 </div>
 
 <div class="input-field col s4">
-	<input type="text" name="local" class="validate" required="" aria-required="true">
+
+<select name="local" required=""  aria-required="true" id="">
+		<option value="CMDO">CMDO</option>
+		<option value="SEC">SEC</option>
+		<option value="SINT">SINT</option>
+		<option value="DA">DA</option>
+		<option value="ACI">ACI</option>
+		<option value="SCI">SCI</option>
+		<option value="SCS">SCS</option>
+		<option value="SDIR-AI">SDIR-AI</option>
+		<option value="SESO-AF">SESO-AF</option>
+		<option value="SDI-M">SDI-M</option>
+		<option value="SDI-R">SDI-R</option>
+		<option value="SDA-IJ">SDA-IJ</option>
+		<option value="SDA-PC">SDA-PC</option>
+		<option value="SDA-PM">SDA-PM</option>
+		<option value="SDA-SD">SDA-SD</option>
+		<option value="SDA-TM">SDA-TM</option>
+		<option value="PENG">PENG</option>
+		<option value="CAP-A">CAP-A</option>
+		<option value="CAP-B">CAP-B</option>
+		<option value="CAP-J">CAP-J</option>
+		<option value="PASC">PASC</option>
+	</select>
+
 	<label for="">Local</label>
 </div>
 
@@ -42,7 +67,16 @@
 </div>
 
 
-<div class="input-field col s8">
+<div class="input-field col s4">
+	<select name="licenciado" id="">
+		<option value=""></option>
+		<option value="Sim">Sim</option>
+		<option value="Nao">Não</option>
+	</select>
+	<label for="">Licenciado</label>
+</div>
+
+<div class="input-field col s4">
 	<input type="text" name="lacre_numero" class="validate">
 	<label for="">Lacre Nº</label>
 </div>

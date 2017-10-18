@@ -26,7 +26,7 @@ class EquipamentosController extends Controller
 
     public function salvar(Request $request)
     {
-    	
+
         $dados = $request->all();
         $equipamento = new Equipamento;
 
@@ -41,6 +41,7 @@ class EquipamentosController extends Controller
         $equipamento['local'] = $dados['local'];
         $equipamento['usuario'] = $dados['usuario'];
         $equipamento['nome_de_rede'] = $dados['nome_de_rede'];
+        $equipamento['licenciado'] = $dados['licenciado'];
         $equipamento['lacre_numero'] = $dados['lacre_numero'];
 
         \Session::flash('mensagem', ['msg' => 'Registro criado com sucesso!', 'class' => 'green white-text']);

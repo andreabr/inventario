@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper blue darken-2">
       <div class="container">
-        <a href="#" class="center brand-logo">Inventário</a>
+        <a href="{{ route('site.home')}}" class="center brand-logo">Inventário</a>
         <ul class="left hide-on-med-and-down">
           <li><a href="{{ route('equipamento.adicionar') }}">Cadastro</a></li>
           <!-- Dropdown Trigger -->

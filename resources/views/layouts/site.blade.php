@@ -9,16 +9,17 @@
   <link rel="stylesheet" type="text/cssx" href="{{ asset('css/style.css')}}">
 
 
-  <title>Laravel</title>
+  <title>Inventário</title>
 
 </head>
 <body id="app-layout">
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">Desktop</a></li>
     <li><a href="#!">Notebook</a></li>
+    <li><a href="#!">Servidor de Rede</a></li>
     <li><a href="#!">Monitor</a></li>
     <li><a href="#!">Impressora</a></li>
-    <li><a href="#!">Servidor de Rede</a></li>
+    <li><a href="#!">Estabilizador</a></li>
     <li><a href="#!">Nobreak</a></li>
     <li><a href="#!">Switch</a></li>
   </ul>

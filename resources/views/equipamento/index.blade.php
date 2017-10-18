@@ -10,7 +10,7 @@
 	@endif
 	<h5>Equipamentos</h5>
 	<div class="divider"></div>
-	
+
 
 	<table class="bordered striped">
 		<thead>
@@ -18,10 +18,11 @@
 				<th>Tipo</th>
 				<th>Marca</th>
 				<th>Modelo</th>
-				<th>Serial</th>
+				<th>Serial/Tag</th>
 				<th>Local</th>
 				<th>Usuário</th>
 				<th>Nome de Rede</th>
+				<th>Licenciado</th>
 				<th>Lacre Nº</th>
 			</tr>
 		</thead>
@@ -36,6 +37,7 @@
 				<td>{{ $equipamento->local }}</td>
 				<td>{{ $equipamento->usuario }}</td>
 				<td>{{ $equipamento->nome_de_rede }}</td>
+				<td>{{ $equipamento->licenciado }}</td>
 				<td>{{ $equipamento->lacre_numero }}</td>
 
 
