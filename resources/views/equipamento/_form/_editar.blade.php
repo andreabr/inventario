@@ -50,6 +50,7 @@
 		<option value="CAP-A" {{ $equipamento->local == "CAP-A" ? 'selected' : ''}}>CAP-A</option>
 		<option value="CAP-B" {{ $equipamento->local == "CAP-B" ? 'selected' : ''}}>CAP-B</option>
 		<option value="CAP-J" {{ $equipamento->local == "CAP-J" ? 'selected' : ''}}>CAP-J</option>
+		<option value="PIPAR" {{ $equipamento->local == "PIPAR" ? 'selected' : ''}}>PIPAR</option>
 		<option value="PASC" {{ $equipamento->local == "PASC" ? 'selected' : ''}}>PASC</option>
 	</select>
 

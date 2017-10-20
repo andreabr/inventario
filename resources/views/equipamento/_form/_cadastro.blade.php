@@ -50,6 +50,7 @@
 		<option value="CAP-A">CAP-A</option>
 		<option value="CAP-B">CAP-B</option>
 		<option value="CAP-J">CAP-J</option>
+		<option value="CAP-J">PIPAR</option>
 		<option value="PASC">PASC</option>
 	</select>
 
