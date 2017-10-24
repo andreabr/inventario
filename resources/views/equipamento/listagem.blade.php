@@ -4,7 +4,7 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Tipo</th>
+				<th>TipoCCC</th>
 				<th>Marca</th>
 				<th>Modelo</th>
 				<th>Serial</th>

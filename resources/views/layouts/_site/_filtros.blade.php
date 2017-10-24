@@ -14,7 +14,7 @@
 	</div>
 	<div class="input-field col s5">
 		<select name="" id="">
-			<option value="tipo-equipamento">Todos</option>
+			<option value="all">Todos</option>
 			<option value="CMDO">CMDO</option>
 			<option value="SEC">SEC</option>
 			<option value="SINT">SINT</option>
@@ -35,6 +35,7 @@
 			<option value="CAP-A">CAP-A</option>
 			<option value="CAP-B">CAP-B</option>
 			<option value="CAP-J">CAP-J</option>
+			<option value="PIPAR">PIPAR</option>
 			<option value="PASC">PASC</option>
 		</select>
 		<label for="">Local</label>

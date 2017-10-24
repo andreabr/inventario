@@ -49,11 +49,10 @@
 		</tbody>
 	</table>
 
-	<div align="center" class="row">
-		{{-- {{ $equipamentos->links() }} --}}
-	</div>
+</div>
 
-
+<div align="center" class="row">
+	{{ $equipamentos->links() }}
 </div>
 
 

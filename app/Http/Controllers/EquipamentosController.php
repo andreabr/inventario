@@ -92,4 +92,12 @@ class EquipamentosController extends Controller
 
 
     }
+
+    public function busca(Request $request)
+    {
+        $busca = $request->all();
+        $imoveis = Equipamento::all();
+
+        return view('site.busca', 'busca', 'imoveis');
+    }
 }

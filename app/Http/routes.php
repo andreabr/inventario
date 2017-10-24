@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', ['as' => 'site.home', 'uses' => 'SiteController@index']);
+Route::get('/', ['as' => 'site.home', 'uses' => 'HomeController@index']); //
 
 
 
