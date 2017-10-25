@@ -51,9 +51,10 @@
 
 </div>
 
+@if($paginacao)
 <div align="center" class="row">
 	{{ $equipamentos->links() }}
 </div>
-
+@endif
 
 

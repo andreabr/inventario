@@ -5,6 +5,7 @@
 		<option value="Servidor de Rede">Servidor de Rede</option>
 		<option value="Monitor">Monitor</option>
 		<option value="Impressora">Impressora</option>
+		<option value="Scanner">Scanner</option>
 		<option value="Estabilizador">Estabilizador</option>
 		<option value="Nobreak">Nobreak</option>
 		<option value="Switch">Switch</option>

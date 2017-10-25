@@ -5,6 +5,7 @@
 			<option value="Servidor de Rede" {{ $equipamento->tipo == "Servidor de Rede" ? 'selected' : ''}}>Servidor de Rede</option>
 			<option value="Monitor" {{ $equipamento->tipo == "Monitor" ? 'selected' : ''}}>Monitor</option>
 			<option value="Impressora" {{ $equipamento->tipo == "Impressora" ? 'selected' : ''}}>Impressora</option>
+			<option value="Scanner" {{ $equipamento->tipo == "Scanner" ? 'selected' : ''}}>Scanner</option>
 			<option value="Estabilizador" {{ $equipamento->tipo == "Estabilizador" ? 'selected' : ''}}>Estabilizador</option>
 			<option value="Nobreak" {{ $equipamento->tipo == "Nobreak" ? 'selected' : ''}}>Nobreak</option>
 			<option value="Switch" {{ $equipamento->tipo == "Switch" ? 'selected' : ''}}>Switch</option>
