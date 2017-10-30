@@ -14,7 +14,12 @@ class HomeController extends Controller
     	$equipamentos = Equipamento::orderBy('id')->paginate(30);
     	// $equipamentos = Equipamento::all();
         $paginacao = true;
-        return view('site.home', compact('equipamentos', 'paginacao'));
+        $totalMaquinas = Equipamento::where('tipo', '=', 'Desktop')->orwhere('tipo', '=', 'Notebook')->count();
+        $licenciados = $equipamentos->where('licenciado', '=', 'Sim')->count();
+
+        return view('site.home', compact('equipamentos', 'paginacao', 'licenciados', 'totalMaquinas'));
+
+
     }
 
 
@@ -47,7 +52,10 @@ class HomeController extends Controller
         }
 
         $equipamentos = Equipamento::where($reqStatus)->where($reqLocal)->get();
+        $totalMaquinas = Equipamento::where($reqStatus)->where($reqLocal)->count();
+        $licenciados = Equipamento::where($reqStatus)->where($reqLocal)->where('licenciado', '=', 'Sim')->count();
+    
 
-        return view ('site.busca', compact('busca', 'equipamentos', 'paginacao'));
+        return view ('site.busca', compact('busca', 'equipamentos', 'paginacao', 'licenciados', 'totalMaquinas'));
     }
 }

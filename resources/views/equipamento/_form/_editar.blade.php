@@ -47,6 +47,7 @@
 		<option value="SDA-PM" {{ $equipamento->local == "SDA-PM" ? 'selected' : ''}}>SDA-PM</option>
 		<option value="SDA-SD" {{ $equipamento->local == "SDA-SD" ? 'selected' : ''}}>SDA-SD</option>
 		<option value="SDA-TM" {{ $equipamento->local == "SDA-TM" ? 'selected' : ''}}>SDA-TM</option>
+		<option value="SDA-TM-ESTOQUE" {{ $equipamento->local == "SDA-TM-ESTOQUE" ? 'selected' : ''}}>SDA-TM-ESTOQUE</option>
 		<option value="PENG" {{ $equipamento->local == "PENG" ? 'selected' : ''}}>PENG</option>
 		<option value="CAP-A" {{ $equipamento->local == "CAP-A" ? 'selected' : ''}}>CAP-A</option>
 		<option value="CAP-B" {{ $equipamento->local == "CAP-B" ? 'selected' : ''}}>CAP-B</option>

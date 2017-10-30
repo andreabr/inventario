@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	@endif
-	<h5>Equipamentos</h5>
+	<h5>Equipamentos - Total Licenciados: {{$licenciados}}</h5>
 	<div class="divider"></div>
 
 

@@ -47,6 +47,7 @@
 		<option value="SDA-PM">SDA-PM</option>
 		<option value="SDA-SD">SDA-SD</option>
 		<option value="SDA-TM">SDA-TM</option>
+		<option value="SDA-TM-ESTOQUE">SDA-TM-ESTOQUE</option>
 		<option value="PENG">PENG</option>
 		<option value="CAP-A">CAP-A</option>
 		<option value="CAP-B">CAP-B</option>
