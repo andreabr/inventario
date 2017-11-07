@@ -16,6 +16,7 @@ Route::get('/', ['as' => 'site.home', 'uses' => 'HomeController@index']); //
 
 
 Route::get('/home', 'HomeController@index');
+Route::get('/setores', ['as' => 'setor.home', 'uses' => 'SetoresController@index']);
 
 // Route::get('/', ['uses' => 'EquipamentosController@listar']);
 
@@ -26,3 +27,10 @@ Route::get('/equipamento/deletar/{id}', ['as' => 'equipamento.deletar', 'uses' =
 Route::put('/equipamento/atualizar/{id}', ['as' => 'equipamento.atualizar', 'uses' => 'EquipamentosController@atualizar']);
 
 Route::get('/busca', ['as' => 'site.busca', 'uses' => 'HomeController@busca']);
+
+
+Route::get('/setor/adicionar', ['as' => 'setor.adicionar', 'uses' => 'SetoresController@adicionar']);
+Route::get('/setor/salvar', ['as' => 'setor.salvar', 'uses' => 'SetoresController@salvar']);
+Route::get('/setor/editar/{id}', ['as' => 'setor.editar', '' => 'SetoresController@editar']);
+Route::get('/setor/deletar/{id}', ['as' => 'setor.deletar', '' => 'SetoresController@deletar']);
+Route::get('/setor/atualizar/{id}', ['as' => 'setor.atualizar', '' => 'SetoresController@atualizar']);

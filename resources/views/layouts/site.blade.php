@@ -13,7 +13,7 @@
 
 </head>
 <body id="app-layout">
-  <ul id="dropdown1" class="dropdown-content">
+  <!--<ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">Desktop</a></li>
     <li><a href="#!">Notebook</a></li>
     <li><a href="#!">Servidor de Rede</a></li>
@@ -22,6 +22,11 @@
     <li><a href="#!">Estabilizador</a></li>
     <li><a href="#!">Nobreak</a></li>
     <li><a href="#!">Switch</a></li>
+  </ul>-->
+
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="{{ route('equipamento.adicionar') }}">Equipamento</a></li>
+    <li><a href="#!">Setor</a></li>
   </ul>
 
   <header>
