@@ -15,10 +15,7 @@ class HomeController extends Controller
     	// $equipamentos = Equipamento::all();
         $paginacao = true;
         return view('site.home', compact('equipamentos', 'paginacao'));
-
-
     }
-
 
     public function busca(Request $request)
     {
@@ -36,7 +33,6 @@ class HomeController extends Controller
             ];
         }
 
-
         if ($busca['local'] == 'todos') {
             $reqLocal = [
             ['local', '<>' , null]
@@ -51,7 +47,7 @@ class HomeController extends Controller
         $equipamentos = Equipamento::where($reqStatus)->where($reqLocal)->get();
         $totalMaquinas = Equipamento::where($reqStatus)->where($reqLocal)->count();
         $licenciados = Equipamento::where($reqStatus)->where($reqLocal)->where('licenciado', '=', 'Sim')->count();
-    
+
 
         return view ('site.busca', compact('busca', 'equipamentos', 'paginacao'));
     }

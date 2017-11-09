@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Equipamento;
+use App\Setor;
 
 class EquipamentosController extends Controller
 
@@ -21,7 +22,8 @@ class EquipamentosController extends Controller
 
     public function adicionar()
     {
-    	return view('equipamento.adicionar');
+        $setores = Setor::all();
+        return view('equipamento.adicionar', compact('setores'));
     }
 
     public function salvar(Request $request)

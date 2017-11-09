@@ -6,6 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipamento extends Model
 {
-    protected $fillable = ['tipo', 'marca', 'modelo', 'serial', 'local', 'usuario', 'nome_de_rede', 'licenciado', 'lacre_numero', 'created_at', 'updated_at'];
     protected $table = 'equipamentos';
+    protected $fillable = ['tipo', 'marca', 'modelo', 'serial', 'local', 'usuario', 'nome_de_rede', 'licenciado', 'lacre_numero', 'created_at', 'updated_at', 'setor_id'];
+
+    public function setor()
+    {
+            return $this->belongsTo('App\Setor', 'setor_id');
+    }
+
+
+
+
+
+
+
 }

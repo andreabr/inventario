@@ -30,30 +30,13 @@
 
 <div class="input-field col s4">
 
-<select name="local" required=""  aria-required="true" id="">
-		<option value="CMDO">CMDO</option>
-		<option value="SEC">SEC</option>
-		<option value="SINT">SINT</option>
-		<option value="DA">DA</option>
-		<option value="ACI">ACI</option>
-		<option value="SCI">SCI</option>
-		<option value="SCS">SCS</option>
-		<option value="SDIR-AI">SDIR-AI</option>
-		<option value="SESO-AF">SESO-AF</option>
-		<option value="SDI-M">SDI-M</option>
-		<option value="SDI-R">SDI-R</option>
-		<option value="SDA-IJ">SDA-IJ</option>
-		<option value="SDA-PC">SDA-PC</option>
-		<option value="SDA-PM">SDA-PM</option>
-		<option value="SDA-SD">SDA-SD</option>
-		<option value="SDA-TM">SDA-TM</option>
-		<option value="SDA-TM-ESTOQUE">SDA-TM-ESTOQUE</option>
-		<option value="PENG">PENG</option>
-		<option value="CAP-A">CAP-A</option>
-		<option value="CAP-B">CAP-B</option>
-		<option value="CAP-J">CAP-J</option>
-		<option value="CAP-J">PIPAR</option>
-		<option value="PASC">PASC</option>
+	<select name="local" required=""  aria-required="true" id="">
+
+		@foreach($setores as $setor)
+
+		<option value="{{$setor->id}}">{{$setor->sigla}}</option>
+
+		@endforeach
 	</select>
 
 	<label for="">Local</label>

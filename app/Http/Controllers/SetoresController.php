@@ -14,6 +14,9 @@ class SetoresController extends Controller
     {
     	$setores = Setor::all();
 
-    	return view('setor.home', compact('setores')); 
+    	return view('setor.home', compact('setores'));
     }
+
+
+
 }
