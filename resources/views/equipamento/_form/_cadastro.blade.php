@@ -30,12 +30,10 @@
 
 <div class="input-field col s4">
 
-	<select name="local" required=""  aria-required="true" id="">
+	<select name="setor_id" required=""  aria-required="true" id="">
 
 		@foreach($setores as $setor)
-
-		<option value="{{$setor->id}}">{{$setor->sigla}}</option>
-
+				<option value="{{$setor->id}}">{{$setor->sigla}}</option>
 		@endforeach
 	</select>
 

@@ -18,7 +18,6 @@ class CreateEquipamentosTable extends Migration
             $table->string('marca');
             $table->string('modelo');
             $table->string('serial');
-            $table->string('local', 15);
             $table->string('usuario')->nullable();
             $table->string('nome_de_rede')->nullable();
             $table->string('lacre_numero')->nullable();

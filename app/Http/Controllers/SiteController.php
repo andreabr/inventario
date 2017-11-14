@@ -14,12 +14,12 @@ class SiteController extends Controller
     	// $equipamentos = Equipamento::orderBy('id')->paginate(1);
     	$equipamentos = Equipamento::all();
 
-    	return view('site.home', compact('equipamentos'));
+    	return view('site.index', compact('equipamentos'));
     }
 
 
     public function busca(Request $request)
     {
-    	
+
     }
 }

@@ -22,7 +22,7 @@ class EquipamentosController extends Controller
 
     public function adicionar()
     {
-        $setores = Setor::all();
+        $setores = Setor::orderBy('sigla')->get();
         return view('equipamento.adicionar', compact('setores'));
     }
 
@@ -32,7 +32,7 @@ class EquipamentosController extends Controller
         $dados = $request->all();
         $equipamento = new Equipamento;
 
-        if($dados['marca'] == '' || $dados['modelo'] == '' || $dados['local'] == ''){
+        if($dados['marca'] == '' || $dados['modelo'] == ''){
             \Session::flash('mensagem', ['msg' => 'Existem campos que precisam ser preechidos!', 'class' => 'red white-text']);
         }
 
@@ -40,7 +40,7 @@ class EquipamentosController extends Controller
         $equipamento['marca'] = $dados['marca'];
         $equipamento['modelo'] = $dados['modelo'];
         $equipamento['serial'] = $dados['serial'];
-        $equipamento['local'] = $dados['local'];
+        $equipamento['setor_id'] = $dados['setor_id'];
         $equipamento['usuario'] = $dados['usuario'];
         $equipamento['nome_de_rede'] = $dados['nome_de_rede'];
         $equipamento['licenciado'] = $dados['licenciado'];
@@ -58,8 +58,9 @@ class EquipamentosController extends Controller
     public function editar($id)
     {
         $equipamento = Equipamento::find($id);
+        $setores = Setor::all();
 
-        return view('equipamento.editar', compact('equipamento'));
+        return view('equipamento.editar', compact('equipamento', 'setores'));
 
     }
 
@@ -67,7 +68,7 @@ class EquipamentosController extends Controller
     {
         $equipamento = Equipamento::find($id);
         $dados = $request->all();
-        if($dados['marca'] == '' || $dados['modelo'] == '' || $dados['local'] == ''){
+        if($dados['marca'] == '' || $dados['modelo'] == ''){
             \Session::flash('mensagem', ['msg' => 'Existem campos que precisam ser preechidos!', 'class' => 'red white-text']);
         }
         $equipamento->update($dados);

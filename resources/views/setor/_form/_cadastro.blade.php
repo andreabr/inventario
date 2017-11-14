@@ -3,7 +3,7 @@
 	<label for="">Sigla</label>
 </div>
 
-<div class="input-field col s4">
+<div class="input-field col s8">
 	<input type="text" name="extenso" class="validate" required="" aria-required="true">
 	<label for="">Nome por Extenso</label>
 </div>

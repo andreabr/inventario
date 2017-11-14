@@ -30,30 +30,12 @@
 
 	<div class="input-field col s4">
 
-<select name="local" required=""  aria-required="true" id="">
-		<option value="CMDO" {{ $equipamento->local == "CMDO" ? 'selected' : ''}}>CMDO</option>
-		<option value="SEC" {{ $equipamento->local == "SEC" ? 'selected' : ''}}>SEC</option>
-		<option value="SINT" {{ $equipamento->local == "SINT" ? 'selected' : ''}}>SINT</option>
-		<option value="DA" {{ $equipamento->local == "DA" ? 'selected' : ''}}>DA</option>
-		<option value="ACI" {{ $equipamento->local == "ACI" ? 'selected' : ''}}>ACI</option>
-		<option value="SCI" {{ $equipamento->local == "SCI" ? 'selected' : ''}}>SCI</option>
-		<option value="SCS" {{ $equipamento->local == "SCS" ? 'selected' : ''}}>SCS</option>
-		<option value="SDIR-AI" {{ $equipamento->local == "SDIR-AI" ? 'selected' : ''}}>SDIR-AI</option>
-		<option value="SESO-AF" {{ $equipamento->local == "SESO-AF" ? 'selected' : ''}}>SESO-AF</option>
-		<option value="SDI-M" {{ $equipamento->local == "SDI-M" ? 'selected' : ''}}>SDI-M</option>
-		<option value="SDI-R" {{ $equipamento->local == "SDI-R" ? 'selected' : ''}}>SDI-R</option>
-		<option value="SDA-IJ" {{ $equipamento->local == "SDA-IJ" ? 'selected' : ''}}>SDA-IJ</option>
-		<option value="SDA-PC" {{ $equipamento->local == "SDA-PC" ? 'selected' : ''}}>SDA-PC</option>
-		<option value="SDA-PM" {{ $equipamento->local == "SDA-PM" ? 'selected' : ''}}>SDA-PM</option>
-		<option value="SDA-SD" {{ $equipamento->local == "SDA-SD" ? 'selected' : ''}}>SDA-SD</option>
-		<option value="SDA-TM" {{ $equipamento->local == "SDA-TM" ? 'selected' : ''}}>SDA-TM</option>
-		<option value="SDA-TM-ESTOQUE" {{ $equipamento->local == "SDA-TM-ESTOQUE" ? 'selected' : ''}}>SDA-TM-ESTOQUE</option>
-		<option value="PENG" {{ $equipamento->local == "PENG" ? 'selected' : ''}}>PENG</option>
-		<option value="CAP-A" {{ $equipamento->local == "CAP-A" ? 'selected' : ''}}>CAP-A</option>
-		<option value="CAP-B" {{ $equipamento->local == "CAP-B" ? 'selected' : ''}}>CAP-B</option>
-		<option value="CAP-J" {{ $equipamento->local == "CAP-J" ? 'selected' : ''}}>CAP-J</option>
-		<option value="PIPAR" {{ $equipamento->local == "PIPAR" ? 'selected' : ''}}>PIPAR</option>
-		<option value="PASC" {{ $equipamento->local == "PASC" ? 'selected' : ''}}>PASC</option>
+<select name="setor_id" required=""  aria-required="true" id="">
+		@foreach($setores as $setor)
+
+		<option value="{{ $setor->id }}" {{ $equipamento->setor_id == $setor->id ? 'selected' : ''}}>{{ $setor->sigla }}</option>
+
+		@endforeach
 	</select>
 
 	<label for="">Local</label>

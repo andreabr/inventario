@@ -34,7 +34,7 @@
 				<td>{{ $equipamento->marca }}</td>
 				<td>{{ $equipamento->modelo }}</td>
 				<td>{{ $equipamento->serial }}</td>
-				<td>{{ $equipamento->local }}</td>
+				<td>{{ $equipamento->setor->sigla }}</td>
 				<td>{{ $equipamento->usuario }}</td>
 				<td>{{ $equipamento->nome_de_rede }}</td>
 				<td>{{ $equipamento->licenciado }}</td>

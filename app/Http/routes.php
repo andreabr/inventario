@@ -30,7 +30,7 @@ Route::get('/busca', ['as' => 'site.busca', 'uses' => 'HomeController@busca']);
 
 
 Route::get('/setor/adicionar', ['as' => 'setor.adicionar', 'uses' => 'SetoresController@adicionar']);
-Route::get('/setor/salvar', ['as' => 'setor.salvar', 'uses' => 'SetoresController@salvar']);
-Route::get('/setor/editar/{id}', ['as' => 'setor.editar', '' => 'SetoresController@editar']);
-Route::get('/setor/deletar/{id}', ['as' => 'setor.deletar', '' => 'SetoresController@deletar']);
-Route::get('/setor/atualizar/{id}', ['as' => 'setor.atualizar', '' => 'SetoresController@atualizar']);
+Route::post('/setor/salvar', ['as' => 'setor.salvar', 'uses' => 'SetoresController@salvar']);
+Route::get('/setor/editar/{id}', ['as' => 'setor.editar', 'uses' => 'SetoresController@editar']);
+Route::get('/setor/deletar/{id}', ['as' => 'setor.deletar', 'uses' => 'SetoresController@deletar']);
+Route::put('/setor/atualizar/{id}', ['as' => 'setor.atualizar', 'uses' => 'SetoresController@atualizar']);

@@ -6,7 +6,7 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('lib/materialize/dist/css/materialize.css')}}">
-  <link rel="stylesheet" type="text/cssx" href="{{ asset('css/style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
 
 
   <title>Inventário</title>
@@ -24,9 +24,10 @@
     <li><a href="#!">Switch</a></li>
   </ul>-->
 
+
   <ul id="dropdown2" class="dropdown-content">
     <li><a href="{{ route('equipamento.adicionar') }}">Equipamento</a></li>
-    <li><a href="#!">Setor</a></li>
+    <li><a href="{{ route('setor.home') }}">Setor</a></li>
   </ul>
 
   <header>
