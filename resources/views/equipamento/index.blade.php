@@ -33,11 +33,11 @@
 				<td>{{ $equipamento->tipo }}</td>
 				<td>{{ $equipamento->marca }}</td>
 				<td>{{ $equipamento->modelo }}</td>
-				<td>{{ $equipamento->serial }}</td>
+				<td class="center-align">{{ empty($equipamento->serial) ? '-' : $equipamento->serial }}</td>
 				<td>{{ $equipamento->setor->sigla }}</td>
 				<td>{{ $equipamento->usuario }}</td>
-				<td>{{ $equipamento->nome_de_rede }}</td>
-				<td>{{ $equipamento->licenciado }}</td>
+				<td class="center-align">{{ $equipamento->nome_de_rede }}</td>
+				<td class="center-align">{{ $equipamento->licenciado }}</td>
 				<td>{{ $equipamento->lacre_numero }}</td>
 
 

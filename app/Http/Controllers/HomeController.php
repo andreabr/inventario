@@ -6,15 +6,19 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Equipamento;
+use App\Setor;
 
 class HomeController extends Controller
 {
     public function index()
     {
     	$equipamentos = Equipamento::orderBy('id')->paginate(30);
-    	// $equipamentos = Equipamento::all();
-        $paginacao = true;
-        return view('site.home', compact('equipamentos', 'paginacao'));
+        // dd($equipamentos);
+        $setores = Setor::orderBy('sigla')->get();
+    	$paginacao = true;
+
+
+        return view('site.home', compact('equipamentos', 'sigla', 'paginacao', 'setores'));
     }
 
     public function busca(Request $request)
@@ -33,22 +37,23 @@ class HomeController extends Controller
             ];
         }
 
-        if ($busca['local'] == 'todos') {
-            $reqLocal = [
-            ['local', '<>' , null]
+        if ($busca['setor'] == 'todos') {
+            $reqSetor = [
+            ['setor_id', '<>' , null]
             ];
         }
         else {
-            $reqLocal = [
-            ['local', '=' , $busca['local']]
+            $reqSetor = [
+            ['setor_id', '=' , $busca['setor']]
             ];
         }
 
-        $equipamentos = Equipamento::where($reqStatus)->where($reqLocal)->get();
-        $totalMaquinas = Equipamento::where($reqStatus)->where($reqLocal)->count();
-        $licenciados = Equipamento::where($reqStatus)->where($reqLocal)->where('licenciado', '=', 'Sim')->count();
+        $equipamentos = Equipamento::where($reqStatus)->where($reqSetor)->get();
+        $setores = Setor::orderBy('sigla')->get();
 
+        $totalMaquinas = Equipamento::where($reqStatus)->where($reqSetor)->count();
+        $licenciados = Equipamento::where($reqStatus)->where($reqSetor)->where('licenciado', '=', 'Sim')->count();
 
-        return view ('site.busca', compact('busca', 'equipamentos', 'paginacao'));
+        return view ('site.busca', compact('busca', 'equipamentos', 'paginacao', 'setores'));
     }
 }

@@ -1,19 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use App\Equipamento;
 use App\Setor;
 
 class EquipamentosController extends Controller
 
 {
-
-
     public function index()
     {
     	$equipamentos = Equipamento::all();
@@ -99,8 +94,8 @@ class EquipamentosController extends Controller
     public function busca(Request $request)
     {
         $busca = $request->all();
-        $imoveis = Equipamento::all();
+        $equipamentos = Equipamento::all();
 
-        return view('site.busca', 'busca', 'imoveis');
+        return view('site.busca', 'busca', 'equipamentos');
     }
 }
