@@ -12,7 +12,6 @@ class EquipamentosController extends Controller
     public function index()
     {
     	$equipamentos = Equipamento::all();
-
     }
 
     public function adicionar()

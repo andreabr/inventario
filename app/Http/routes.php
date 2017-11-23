@@ -35,4 +35,5 @@ Route::get('/setor/editar/{id}', ['as' => 'setor.editar', 'uses' => 'SetoresCont
 Route::get('/setor/deletar/{id}', ['as' => 'setor.deletar', 'uses' => 'SetoresController@deletar']);
 Route::put('/setor/atualizar/{id}', ['as' => 'setor.atualizar', 'uses' => 'SetoresController@atualizar']);
 
-Route::get('/cautele/gerar', ['as' => 'cautela.gerar', 'uses' => 'CautelasController@gerar']);
+Route::get('/cautela/index', ['as' => 'cautela.index', 'uses' => 'CautelasController@index']);
+Route::post('/cautela/gerar', ['as' => 'cautela.gerar', 'uses' => 'CautelasController@gerar']);

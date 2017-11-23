@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RelacionarMarcaProduto extends Migration
+class RelacionarEquipamentoSetor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class RelacionarMarcaProduto extends Migration
     public function up()
     {
         Schema::table('equipamentos', function(Blueprint $table) {
-            $table->integer('setor_id')->unsigned();
+            // $table->integer('setor_id')->unsigned();
             $table->foreign('setor_id')->references('id')->on('setores');
         });
     }

@@ -1,4 +1,3 @@
-
 	<div class="input-field col s4">
 		<input type="text" name="sigla" value="{{ $setor->sigla }}" class="validate" required="" aria-required="true">
 		<label for="">Sigla</label>

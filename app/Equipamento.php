@@ -14,10 +14,4 @@ class Equipamento extends Model
             return $this->belongsTo('App\Setor', 'setor_id');
     }
 
-
-
-
-
-
-
 }

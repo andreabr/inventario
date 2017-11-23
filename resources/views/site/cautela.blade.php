@@ -7,8 +7,7 @@
             <div class="panel panel-default">
 
                 <br>
-                @include('layouts._site._filtros')
-                @include('equipamento.index')
+                @include('cautela.index')
 
             </div>
         </div>

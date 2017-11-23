@@ -25,7 +25,7 @@
   </ul>-->
 
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="{{ route('cautela.gerar') }}">Gerar</a></li>
+    <li><a href="{{ route('cautela.index') }}">Gerar</a></li>
   </ul>
 
   <ul id="dropdown2" class="dropdown-content">
