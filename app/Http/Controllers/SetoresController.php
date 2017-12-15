@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Setor;
 
+
 class SetoresController extends Controller
 {
     public function index()

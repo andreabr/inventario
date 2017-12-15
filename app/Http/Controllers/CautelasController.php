@@ -12,23 +12,37 @@ class CautelasController extends Controller
 {
 	public function index()
 	{
-		$setores = Setor::orderBy('sigla')->get();
+		$equipamentos = Equipamento::all()->pluck('setor_id')->unique();
+		
+		$setoresComEquipamentos = $equipamentos->map(function($item){
+			return Setor::find($item);
+		});
 
-		return view('site.cautela', compact('setores'));
+		$setoresComEquipamentos = $setoresComEquipamentos->sortBy('sigla');
+
+		return view('site.cautela', compact('setoresComEquipamentos'));
+		
 	}
 
 	public function gerar(Request $request)
 	{
 		$inputSetores = $request->input('setor');
-
-		// dd($inputSetores);
-
-		foreach ($inputSetores as $idSetor)
-		{
-			$setor = Setor::find($idSetor);
-			$equipamentoPorSetor[] = $setor->equipamento;			
+		if (empty($inputSetores)) {
+			\Session::flash('mensagem', ['msg' => 'Selecione ao menos um setor', 'class' => 'red white-text']);
 		}
 
-		dd($equipamentoPorSetor);
+		else {
+			foreach ($inputSetores as $idSetor)
+			{
+				$setor = Setor::find($idSetor);
+				$equipamentosPorSetor[$setor->sigla] = $setor->equipamento;		
+			}
+
+			// dd($equipamentosPorSetor);
+		}
+		
+		return view('cautela.one-page', compact('equipamentosPorSetor'));
+		// return redirect()->route('cautela.index');
 	}
+
 }

@@ -1,0 +1,120 @@
+@page { margin: 0 }
+body { margin: 0 }
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/** Paper sizes **/
+body.A3           .sheet { width: 297mm; height: 419mm }
+body.A3.landscape .sheet { width: 420mm; height: 296mm }
+body.A4           .sheet { width: 210mm; height: 296mm }
+body.A4.landscape .sheet { width: 297mm; height: 209mm }
+body.A5           .sheet { width: 148mm; height: 209mm }
+body.A5.landscape .sheet { width: 210mm; height: 147mm }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+ body.A3.landscape { width: 420mm }
+ body.A3, body.A4.landscape { width: 297mm }
+ body.A4, body.A5.landscape { width: 210mm }
+ body.A5                    { width: 148mm }
+}
+
+.box {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ementa {
+  margin-top: 2mm;
+  font-size: 1.5em;
+
+}
+
+.ementa-secao {
+  margin-top: 5mm;
+  padding: 2mm;
+  font-size: 1.5em;
+}
+
+
+.preambulo {
+  margin-top: 5mm;
+  font-size: 0.9em;
+
+}
+
+.preambulo p {
+  text-indent: 50px;
+  text-align: justify;
+}
+
+.tabela {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.tabela tr td {
+  border: 1px solid #000000;
+ }
+
+thead th {
+  border: 1px solid #000000;
+  font-size: 0.8em;
+}
+
+td {
+  font-size: 0.8em;
+}
+
+.data{
+  font-size: 0.8em;
+}
+.assinatura {
+  margin-top: 7mm;
+  background:gray;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.assinatura div {
+  background:#CCC;
+  margin-right:10px;
+  -webkit-flex:1 1 auto;
+  flex:1 1 auto;
+  flex-direction: row;
+  /*-webkit-justify-content: center;
+  justify-content: center;*/
+
+}
+
+.assinatura3 {
+  margin-top: 7mm;
+}
+
+.assinatura3 p {
+  margin: 0;
+  padding: 0;
+}
