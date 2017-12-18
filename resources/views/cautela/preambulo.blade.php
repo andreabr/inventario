@@ -1,6 +1,7 @@
+@section('content')
 <div class="box">
 		<div class="ementa-secao" style="border: 1px solid #000000;">
-			PENG
+			{{$setor}}
 		</div>
 	</div>
 

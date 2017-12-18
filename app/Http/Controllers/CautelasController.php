@@ -13,7 +13,7 @@ class CautelasController extends Controller
 	public function index()
 	{
 		$equipamentos = Equipamento::all()->pluck('setor_id')->unique();
-		
+
 		$setoresComEquipamentos = $equipamentos->map(function($item){
 			return Setor::find($item);
 		});
@@ -21,7 +21,7 @@ class CautelasController extends Controller
 		$setoresComEquipamentos = $setoresComEquipamentos->sortBy('sigla');
 
 		return view('site.cautela', compact('setoresComEquipamentos'));
-		
+
 	}
 
 	public function gerar(Request $request)
@@ -35,14 +35,51 @@ class CautelasController extends Controller
 			foreach ($inputSetores as $idSetor)
 			{
 				$setor = Setor::find($idSetor);
-				$equipamentosPorSetor[$setor->sigla] = $setor->equipamento;		
+				$equipamentosPorSetor[$setor->sigla] = $setor->equipamento;
 			}
 
 			// dd($equipamentosPorSetor);
 		}
-		
-		return view('cautela.one-page', compact('equipamentosPorSetor'));
+
+		return view('cautela.page')->with(compact('equipamentosPorSetor'));
 		// return redirect()->route('cautela.index');
 	}
 
 }
+
+	// $equipamentosAll = array(
+  //               'SDA-TM' => array(
+  //                               '0' =>
+  //                               array(
+  //                                   'tipo' => 'Desktop',
+  //                                   'marca' => 'Dell',
+  //                                   'modelo' => 'Optiplex 380',
+  //                                   'serial' => '123DMEL3R3455'
+  //                                   ),
+  //                                '1' =>
+  //                                 array(
+  //                                   'tipo' => 'Monitor',
+  //                                   'marca' => 'Philips',
+  //                                   'modelo' => 'P2317K',
+  //                                   'serial' => '3R3455'
+  //                                   )
+  //                               ),
+
+  //                'DA' => array(
+  //                               '0' =>
+  //                               array(
+  //                                   'tipo' => 'Servidor',
+  //                                   'marca' => 'Dell',
+  //                                   'modelo' => 'Optiplex 380',
+  //                                   'serial' => '123DMEL3R3455'
+  //                                   ),
+  //                                '1' =>
+  //                                 array(
+  //                                   'tipo' => 'Estabilizador',
+  //                                   'marca' => 'Dell',
+  //                                   'modelo' => 'Optiplex 380',
+  //                                   'serial' => '123DMEL3R3455'
+  //                                   )
+  //                              )
+  //                       );
+

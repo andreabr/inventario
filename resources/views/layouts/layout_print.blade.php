@@ -18,7 +18,7 @@
   <section class="sheet padding-10mm">
 
   @include('cautela.cabecalho')
-  
+
       @yield('content')
 
   </section>
