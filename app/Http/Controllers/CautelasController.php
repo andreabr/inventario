@@ -42,44 +42,9 @@ class CautelasController extends Controller
 		}
 
 		return view('cautela.page')->with(compact('equipamentosPorSetor'));
-		// return redirect()->route('cautela.index');
+
 	}
 
 }
 
-	// $equipamentosAll = array(
-  //               'SDA-TM' => array(
-  //                               '0' =>
-  //                               array(
-  //                                   'tipo' => 'Desktop',
-  //                                   'marca' => 'Dell',
-  //                                   'modelo' => 'Optiplex 380',
-  //                                   'serial' => '123DMEL3R3455'
-  //                                   ),
-  //                                '1' =>
-  //                                 array(
-  //                                   'tipo' => 'Monitor',
-  //                                   'marca' => 'Philips',
-  //                                   'modelo' => 'P2317K',
-  //                                   'serial' => '3R3455'
-  //                                   )
-  //                               ),
-
-  //                'DA' => array(
-  //                               '0' =>
-  //                               array(
-  //                                   'tipo' => 'Servidor',
-  //                                   'marca' => 'Dell',
-  //                                   'modelo' => 'Optiplex 380',
-  //                                   'serial' => '123DMEL3R3455'
-  //                                   ),
-  //                                '1' =>
-  //                                 array(
-  //                                   'tipo' => 'Estabilizador',
-  //                                   'marca' => 'Dell',
-  //                                   'modelo' => 'Optiplex 380',
-  //                                   'serial' => '123DMEL3R3455'
-  //                                   )
-  //                              )
-  //                       );
 

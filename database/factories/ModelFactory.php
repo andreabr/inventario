@@ -11,11 +11,13 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Equipamento::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'tipo' => 'Notebook',
+        'marca' => str_random(5),
+        'modelo' => str_random(5),
+        'serial' => str_random(10),
+        'licenciado' => str_random(3),
+        'setor_id' => 27,
     ];
 });

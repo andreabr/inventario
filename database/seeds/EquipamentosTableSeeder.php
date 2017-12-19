@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
-class DatabaseSeeder extends Seeder
+class EquipamentosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(EquipamentosTableSeeder::class);
+            factory(App\Equipamento::class, 50)->create();
+
+
     }
 }

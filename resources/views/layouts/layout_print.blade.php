@@ -17,14 +17,24 @@
 
   <section class="sheet padding-10mm">
 
-  @include('cautela.cabecalho')
+    @include('cautela.cabecalho')
 
-      @yield('content')
+    @include('cautela.preambulo')
+    @include('cautela.tabela-cabecalho')
+
+    {{$equipamentos->count()}}
+
+    @each('cautela.cautelas-css-puro', $equipamentos, 'equipamento')
+
+    @include('cautela.tabela-rodape-data')
+    @include('cautela.assinatura-setor')
+    @include('cautela.assinatura-ch-stel')
+
 
   </section>
 
   <script src="{{ asset('lib/jquery/dist/jquery.js') }}"></script>
-  <script src="{{ asset('lib/materialize/dist/js/materialize.js') }}"></script>
+  {{-- <script src="{{ asset('lib/materialize/dist/js/materialize.js') }}"></script> --}}
   <script src="{{ asset('js/init.js') }}"></script>
 
 </body>
