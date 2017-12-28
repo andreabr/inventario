@@ -40,6 +40,11 @@ body.A5.landscape .sheet { width: 210mm; height: 147mm }
  body.A5                    { width: 148mm }
 }
 
+/*.sheet {
+  overflow: visible;
+  height: auto !important;
+}*/
+
 .box {
 
   display: flex;
@@ -78,7 +83,7 @@ body.A5.landscape .sheet { width: 210mm; height: 147mm }
 
 .tabela tr td {
   border: 1px solid #000000;
- }
+}
 
 thead th {
   border: 1px solid #000000;
@@ -117,4 +122,12 @@ td {
 .assinatura3 p {
   margin: 0;
   padding: 0;
+}
+
+.footer {
+  position:absolute;
+  margin-left: -1cm;
+  padding: 0;
+  bottom: 0.5cm;
+  width: 100%;
 }

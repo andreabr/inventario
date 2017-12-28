@@ -17,18 +17,20 @@
 
   <section class="sheet padding-10mm">
 
-    @include('cautela.cabecalho')
 
-    @include('cautela.preambulo')
+    {{-- @include('cautela.cabecalho')
+    @include('cautela.preambulo') --}}
+
     @include('cautela.tabela-cabecalho')
-
-    {{$equipamentos->count()}}
-
-    @each('cautela.cautelas-css-puro', $equipamentos, 'equipamento')
+    @include('cautela.cautela-two-pages-two')
 
     @include('cautela.tabela-rodape-data')
+
     @include('cautela.assinatura-setor')
+   
     @include('cautela.assinatura-ch-stel')
+
+    @include('cautela.rodape')
 
 
   </section>
